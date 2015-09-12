@@ -36,8 +36,8 @@
       <file leaf-file-name="WeightedQuickUnionUF.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/UnionFind/WeightedQuickUnionUF.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.16329704">
-              <caret line="7" column="5" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0933126">
+              <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
               <folding>
                 <element signature="e#1378#1379#0" expanded="true" />
                 <element signature="e#1423#1424#0" expanded="true" />
@@ -742,12 +742,12 @@
       <workItem from="1441840288617" duration="2021000" />
       <workItem from="1441913518363" duration="2275000" />
       <workItem from="1442030634352" duration="101000" />
-      <workItem from="1442034785242" duration="1330000" />
+      <workItem from="1442034785242" duration="1350000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7277000" />
+    <option name="totallyTimeSpent" value="7297000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1282" height="775" extended-state="6" />
@@ -1006,8 +1006,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/UnionFind/WeightedQuickUnionUF.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16329704">
-          <caret line="7" column="5" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0933126">
+          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
           <folding>
             <element signature="e#1378#1379#0" expanded="true" />
             <element signature="e#1423#1424#0" expanded="true" />
