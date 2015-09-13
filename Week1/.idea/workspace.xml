@@ -4,11 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b2fd06f9-d437-4693-8ddd-e9b7f0bcf7d8" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Week1/Percolation.class" afterPath="$PROJECT_DIR$/out/production/Week1/Percolation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Percolation.java" afterPath="$PROJECT_DIR$/src/Percolation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="b2fd06f9-d437-4693-8ddd-e9b7f0bcf7d8" name="Default" comment="" />
     <ignored path="Percolation.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -746,7 +742,7 @@
       <workItem from="1442030752128" duration="7055000" />
       <workItem from="1442072443451" duration="15299000" />
       <workItem from="1442106670798" duration="682000" />
-      <workItem from="1442173306011" duration="3320000" />
+      <workItem from="1442173306011" duration="3346000" />
     </task>
     <task id="LOCAL-00001" summary="More updates&#10;">
       <created>1442106794841</created>
@@ -772,11 +768,17 @@
       <option name="project" value="LOCAL" />
       <updated>1442176483730</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Grid array changed from int to boolean">
+      <created>1442176646175</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1442176646175</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26356000" />
+    <option name="totallyTimeSpent" value="26382000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1282" height="775" extended-state="6" />
@@ -826,7 +828,8 @@
     <MESSAGE value="Connecting cell, plus multiple bottoms" />
     <MESSAGE value="Remove connecting cell" />
     <MESSAGE value="Bottom array changed from int to boolean" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bottom array changed from int to boolean" />
+    <MESSAGE value="Grid array changed from int to boolean" />
+    <option name="LAST_COMMIT_MESSAGE" value="Grid array changed from int to boolean" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
