@@ -2,7 +2,7 @@ import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 public class Percolation
 {
-    //    Corner cases.  By convention, the row and column indices i and j are integers between 1 and N, where (1, 1)
+    // Corner cases.  By convention, the row and column indices i and j are integers between 1 and N, where (1, 1)
     // is the upper-left site: Throw a java.lang.IndexOutOfBoundsException if any argument to open(), isOpen(), or
     // isFull() is outside its prescribed range. The constructor should throw a java.lang.IllegalArgumentException if
     // N ≤ 0.
@@ -12,7 +12,8 @@ public class Percolation
 
     private final int TOP = 0;
 
-    private int[] bottom;
+    //    private int[] bottom;
+    private boolean[] bottom;
 
     private int N;
 
@@ -30,7 +31,7 @@ public class Percolation
 
         grid = new int[ N + 1 ][ N + 1 ];
 
-        bottom = new int[ N / 2 + N % 2 ];
+        bottom = new boolean[ N / 2 + N % 2 ];
 
         weightedQuickUnionUF = new WeightedQuickUnionUF( N * N + 1 + bottom.length );
     }
@@ -95,19 +96,16 @@ public class Percolation
             {
                 weightedQuickUnionUF.union( getId( i, j ), getId( i + 1, j ) );
             }
-
         }
-
     }
 
     private int getNextBottom()
     {
         int b;
-        for ( b = 0; b < bottom.length && bottom[ b ] == OPEN; b++ )
-        {
-            ;
-        }
-        bottom[ b ] = OPEN;
+
+        //noinspection StatementWithEmptyBody
+        for ( b = 0; b < bottom.length && bottom[ b ]; b++ );
+        bottom[ b ] = true;
         return getId( N, N ) + b + 1;
     }
 
@@ -143,7 +141,7 @@ public class Percolation
     // does the system percolate?
     public boolean percolates()
     {
-        for ( int b = 0; b < bottom.length && bottom[ b ] == OPEN; b++ )
+        for ( int b = 0; b < bottom.length && bottom[ b ]; b++ )
         {
             if ( weightedQuickUnionUF.connected( TOP, getId( N, N ) + b + 1 ) )
             {
