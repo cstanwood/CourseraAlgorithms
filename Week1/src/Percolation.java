@@ -11,12 +11,10 @@ public class Percolation
     private final int OPEN = 1;
 
     private final int TOP = 0;
-    //    private int BOTTOM;
+
     private int[] bottom;
 
     private int N;
-
-    private int connectingCell = -1;
 
     private WeightedQuickUnionUF weightedQuickUnionUF;
 
@@ -30,13 +28,10 @@ public class Percolation
 
         this.N = N;
 
-        grid = new int[ N + 1 ][ N + 1 ];//[ 2 ];
-
-//        BOTTOM = N * N + 1;
+        grid = new int[ N + 1 ][ N + 1 ];
 
         bottom = new int[ N / 2 + N % 2 ];
 
-//        weightedQuickUnionUF = new WeightedQuickUnionUF( N * N + 2 );
         weightedQuickUnionUF = new WeightedQuickUnionUF( N * N + 1 + bottom.length );
     }
 
@@ -103,14 +98,6 @@ public class Percolation
 
         }
 
-
-        if ( connectingCell == -1 )
-        {
-            if ( percolates() )
-            {
-                connectingCell = getId( i, j );
-            }
-        }
     }
 
     private int getNextBottom()
@@ -121,7 +108,6 @@ public class Percolation
             ;
         }
         bottom[ b ] = OPEN;
-//        return b < bottom.length ? b + 1 : b; // b should always be less than bottom.length
         return getId( N, N ) + b + 1;
     }
 
@@ -151,21 +137,12 @@ public class Percolation
             throw new IndexOutOfBoundsException();
         }
 
-        if ( connectingCell == -1 )
-        {
-            return weightedQuickUnionUF.connected( TOP, getId( i, j ) );
-        }
-        else
-        {
-            return weightedQuickUnionUF.connected( TOP, getId( i, j ) ) &&
-                    weightedQuickUnionUF.connected( connectingCell, getId( i, j ) );
-        }
+        return weightedQuickUnionUF.connected( TOP, getId( i, j ) );
     }
 
     // does the system percolate?
     public boolean percolates()
     {
-//        return weightedQuickUnionUF.connected( TOP, BOTTOM );
         for ( int b = 0; b < bottom.length && bottom[ b ] == OPEN; b++ )
         {
             if ( weightedQuickUnionUF.connected( TOP, getId( N, N ) + b + 1 ) )
@@ -174,7 +151,6 @@ public class Percolation
             }
         }
         return false;
-//        return weightedQuickUnionUF.connected( TOP, BOTTOM );
     }
 
     // test client (optional)
