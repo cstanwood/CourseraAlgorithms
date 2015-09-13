@@ -6,13 +6,10 @@ public class Percolation
     // is the upper-left site: Throw a java.lang.IndexOutOfBoundsException if any argument to open(), isOpen(), or
     // isFull() is outside its prescribed range. The constructor should throw a java.lang.IllegalArgumentException if
     // N ≤ 0.
-    private int[][] grid;
-
-    private final int OPEN = 1;
+    private boolean[][] grid;
 
     private final int TOP = 0;
 
-    //    private int[] bottom;
     private boolean[] bottom;
 
     private int N;
@@ -29,7 +26,7 @@ public class Percolation
 
         this.N = N;
 
-        grid = new int[ N + 1 ][ N + 1 ];
+        grid = new boolean[ N + 1 ][ N + 1 ];
 
         bottom = new boolean[ N / 2 + N % 2 ];
 
@@ -45,7 +42,7 @@ public class Percolation
         }
 
         // open site
-        grid[ i ][ j ] = OPEN;
+        grid[ i ][ j ] = true;
 
         // connect to site above
         if ( i == 1 )
@@ -123,7 +120,7 @@ public class Percolation
             throw new IndexOutOfBoundsException();
         }
 
-        return grid[ i ][ j ] == OPEN;
+        return grid[ i ][ j ];
     }
 
     // is site (row i, column j) full?
