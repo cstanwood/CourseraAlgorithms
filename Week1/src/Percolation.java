@@ -8,10 +8,10 @@ public class Percolation
     // N ≤ 0.
     private int[][] grid;
 
-    private static final int OPEN = 1;
+    private final int OPEN = 1;
 
-    private static final int TOP = 0;
-    private static int BOTTOM;
+    private final int TOP = 0;
+    private int BOTTOM;
 
     private int N;
 
@@ -37,7 +37,7 @@ public class Percolation
     // open site (row i, column j) if it is not open already
     public void open( int i, int j )
     {
-        if ( i < 1 || i > N || j < 1 || j > N)
+        if ( i < 1 || i > N || j < 1 || j > N )
         {
             throw new IndexOutOfBoundsException();
         }
@@ -48,7 +48,7 @@ public class Percolation
         // connect to site above
         if ( i == 1 )
         {
-            weightedQuickUnionUF.union( getId( i,j ), TOP );
+            weightedQuickUnionUF.union( getId( i, j ), TOP );
         }
         else
         {
@@ -99,7 +99,7 @@ public class Percolation
     public boolean isOpen( int i, int j )
     {
 
-        if ( i < 1 || i > N || j < 1 || j > N)
+        if ( i < 1 || i > N || j < 1 || j > N )
         {
             throw new IndexOutOfBoundsException();
         }
@@ -111,7 +111,7 @@ public class Percolation
     public boolean isFull( int i, int j )
     {
 
-        if ( i < 1 || i > N || j < 1 || j > N)
+        if ( i < 1 || i > N || j < 1 || j > N )
         {
             throw new IndexOutOfBoundsException();
         }
