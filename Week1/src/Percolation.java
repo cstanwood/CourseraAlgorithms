@@ -11,9 +11,12 @@ public class Percolation
     private final int OPEN = 1;
 
     private final int TOP = 0;
-    private int BOTTOM;
+    //    private int BOTTOM;
+    private int[] bottom;
 
     private int N;
+
+    private int connectingCell = -1;
 
     private WeightedQuickUnionUF weightedQuickUnionUF;
 
@@ -29,9 +32,12 @@ public class Percolation
 
         grid = new int[ N + 1 ][ N + 1 ];//[ 2 ];
 
-        BOTTOM = N * N + 1;
+//        BOTTOM = N * N + 1;
 
-        weightedQuickUnionUF = new WeightedQuickUnionUF( N * N + 2 );
+        bottom = new int[ N / 2 + N % 2 ];
+
+//        weightedQuickUnionUF = new WeightedQuickUnionUF( N * N + 2 );
+        weightedQuickUnionUF = new WeightedQuickUnionUF( N * N + 1 + bottom.length );
     }
 
     // open site (row i, column j) if it is not open already
@@ -58,24 +64,14 @@ public class Percolation
             }
         }
 
-        //connect to site below
-        if ( i == N )
-        {
-            weightedQuickUnionUF.union( getId( i, j ), BOTTOM );
-        }
-        else
-        {
-            if ( isOpen( i + 1, j ) )
-            {
-                weightedQuickUnionUF.union( getId( i, j ), getId( i + 1, j ) );
-            }
-        }
+        boolean exitAlreadyOpen = false;
 
         //connect to site at left
         if ( j != 1 )
         {
             if ( isOpen( i, j - 1 ) )
             {
+                exitAlreadyOpen = true;
                 weightedQuickUnionUF.union( getId( i, j ), getId( i, j - 1 ) );
             }
         }
@@ -85,9 +81,48 @@ public class Percolation
         {
             if ( isOpen( i, j + 1 ) )
             {
+                exitAlreadyOpen = true;
                 weightedQuickUnionUF.union( getId( i, j ), getId( i, j + 1 ) );
             }
         }
+
+        //connect to site below
+        if ( i == N )
+        {
+            if ( !exitAlreadyOpen )
+            {
+                weightedQuickUnionUF.union( getId( i, j ), getNextBottom() );
+            }
+        }
+        else
+        {
+            if ( isOpen( i + 1, j ) )
+            {
+                weightedQuickUnionUF.union( getId( i, j ), getId( i + 1, j ) );
+            }
+
+        }
+
+
+        if ( connectingCell == -1 )
+        {
+            if ( percolates() )
+            {
+                connectingCell = getId( i, j );
+            }
+        }
+    }
+
+    private int getNextBottom()
+    {
+        int b;
+        for ( b = 0; b < bottom.length && bottom[ b ] == OPEN; b++ )
+        {
+            ;
+        }
+        bottom[ b ] = OPEN;
+//        return b < bottom.length ? b + 1 : b; // b should always be less than bottom.length
+        return getId( N, N ) + b + 1;
     }
 
     private int getId( int i, int j )
@@ -116,13 +151,30 @@ public class Percolation
             throw new IndexOutOfBoundsException();
         }
 
-        return weightedQuickUnionUF.connected( TOP, getId( i, j ) );
+        if ( connectingCell == -1 )
+        {
+            return weightedQuickUnionUF.connected( TOP, getId( i, j ) );
+        }
+        else
+        {
+            return weightedQuickUnionUF.connected( TOP, getId( i, j ) ) &&
+                    weightedQuickUnionUF.connected( connectingCell, getId( i, j ) );
+        }
     }
 
     // does the system percolate?
     public boolean percolates()
     {
-        return weightedQuickUnionUF.connected( TOP, BOTTOM );
+//        return weightedQuickUnionUF.connected( TOP, BOTTOM );
+        for ( int b = 0; b < bottom.length && bottom[ b ] == OPEN; b++ )
+        {
+            if ( weightedQuickUnionUF.connected( TOP, getId( N, N ) + b + 1 ) )
+            {
+                return true;
+            }
+        }
+        return false;
+//        return weightedQuickUnionUF.connected( TOP, BOTTOM );
     }
 
     // test client (optional)
