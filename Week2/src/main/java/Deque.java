@@ -5,8 +5,6 @@ public class Deque<Item> implements Iterable<Item>
 {
 
     private int N;          // size of the stack
-    //	private Node startSentinel;     // first item in dequeue
-    //	private Node endSentinel;     // nextToLast item in dequeue
     private Node first;
     private Node last;
 
@@ -49,30 +47,42 @@ public class Deque<Item> implements Iterable<Item>
 
     // add the item to the front
     public void addFirst( Item item )
-    {
-        Node oldfirst = first;
-        first = new Node( item );
-        first.next = oldfirst;
-        if ( oldfirst != null )
-        {
-            oldfirst.previous = first;
-        }
-        N++;
+	{
+		Node newNode = new Node( item );
+		if ( isEmpty() )
+		{
+			first = newNode;
+			last = newNode;
+		}
+		else
+		{
+			newNode.next = first;
+			first.previous = newNode;
+			first = newNode;
+		}
 
-    }
+		N++;
+
+	}
 
     // add the item to the end
     public void addLast( Item item )
-    {
-        Node oldLast = last;
-        last = new Node( item );
-        last.previous = oldLast;
-        if ( oldLast != null )
-        {
-            oldLast.next = last;
-        }
-        N++;
-    }
+	{
+		Node newNode = new Node( item );
+		if ( isEmpty() )
+		{
+			first = newNode;
+			last = newNode;
+		}
+		else
+		{
+			last.next = newNode;
+			newNode.previous = last;
+			last = newNode;
+		}
+
+		N++;
+	}
 
     // remove and return the item from the front
     public Item removeFirst()
@@ -124,10 +134,37 @@ public class Deque<Item> implements Iterable<Item>
     }
 
     // return an iterator over items in order from front to end
-    public Iterator<Item> iterator()
-    {
-        return null;
-    }
+	public Iterator<Item> iterator()
+	{
+		return new ListIterator();
+	}
+
+	// an iterator, doesn't implement remove() since it's optional
+	private class ListIterator implements Iterator<Item>
+	{
+		private Node current = first;
+
+		public boolean hasNext()
+		{
+			return current != null;
+		}
+
+		public void remove()
+		{
+			throw new UnsupportedOperationException();
+		}
+
+		public Item next()
+		{
+			if ( !hasNext() )
+			{
+				throw new NoSuchElementException();
+			}
+			Item item = current.item;
+			current = current.next;
+			return item;
+		}
+	}
 
     // unit testing
     public static void main( String[] args )

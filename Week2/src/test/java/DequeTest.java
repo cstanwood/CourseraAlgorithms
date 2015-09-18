@@ -1,28 +1,18 @@
+import junit.framework.Assert;
+
 import static junit.framework.TestCase.assertEquals;
 
 /**
- * Created by cstanwood on 17/09/15.
+ * Created by Christopher Stanwood
+ * On 17/09/15.
  */
 public class DequeTest
 {
 
-
-    @org.junit.Before
-    public void setUp() throws Exception
-    {
-
-    }
-
-    @org.junit.After
-    public void tearDown() throws Exception
-    {
-
-    }
-
     @org.junit.Test
     public void testIsEmpty() throws Exception
     {
-        Deque<String> deque = new Deque<>();
+        Deque<String> deque = new Deque<String>();
         assertEquals( deque.isEmpty(), true );
         deque.addFirst( "Hi" );
         assertEquals( deque.isEmpty(), false );
@@ -41,6 +31,25 @@ public class DequeTest
     @org.junit.Test
     public void testSize() throws Exception
     {
+		Deque<String> strings = new Deque<String>();
+
+		Assert.assertEquals( strings.size(), 0 );
+		strings.addLast( "a" );
+		Assert.assertEquals( strings.size(), 1 );
+		strings.addLast( "b" );
+		Assert.assertEquals( strings.size(), 2 );
+		strings.removeFirst();
+		Assert.assertEquals( strings.size(), 1 );
+		strings.addLast( "c" );
+		Assert.assertEquals( strings.size(), 2 );
+		strings.removeFirst();
+		Assert.assertEquals( strings.size(), 1 );
+		strings.removeLast();
+		Assert.assertEquals( strings.size(), 0 );
+		strings.addFirst( "d" );
+		Assert.assertEquals( strings.size(), 1 );
+		strings.removeFirst();
+		Assert.assertEquals( strings.size(), 0 );
 
     }
 
@@ -49,7 +58,7 @@ public class DequeTest
     {
         String result;
 
-        Deque<String> deque = new Deque();
+        Deque<String> deque = new Deque<String>();
         deque.addFirst( "a" );
         deque.addFirst( "b" );
         deque.addFirst( "c" );
@@ -76,7 +85,7 @@ public class DequeTest
     public void testAddLast() throws Exception
     {
         String result;
-        Deque<String> deque = new Deque();
+        Deque<String> deque = new Deque<String>();
 
         deque.addLast( "a" );
         deque.addLast( "b" );
@@ -103,7 +112,7 @@ public class DequeTest
     @org.junit.Test
     public void testMultipleAddAndRemove() throws Exception
     {
-        Deque<String> deque = new Deque<>();
+        Deque<String> deque = new Deque<String>();
 
         String result;
 
@@ -113,19 +122,46 @@ public class DequeTest
         assertEquals( result, "a" );
         result = deque.removeLast();
         assertEquals( result, "b" );
+
+        deque.addLast( "a" );
+        deque.addFirst( "b" );
+        result = deque.removeFirst();
+        assertEquals( result, "b" );
+        result = deque.removeLast();
+        assertEquals( result, "a" );
+
+        deque.addFirst( "a" );
+        deque.addLast( "b" );
+		result = deque.removeLast();
+		assertEquals( result, "b" );
+		result = deque.removeFirst();
+		assertEquals( result, "a" );
+
+		deque.addLast( "a" );
+		deque.addFirst( "b" );
+		result = deque.removeLast();
+		assertEquals( result, "a" );
+		result = deque.removeFirst();
+		assertEquals( result, "b" );
     }
 
 
     @org.junit.Test
 
     public void testIterator() throws Exception
-    {
+	{
+		Deque<Integer> integers = new Deque<Integer>();
 
-    }
+		for ( int i = 0; i < 10; i++ )
+		{
+			integers.addLast( new Integer( i ) );
+		}
 
-    @org.junit.Test
-    public void testMain() throws Exception
-    {
+		int i = 0;
+		for ( Integer j : integers )
+		{
+			assertEquals( new Integer( i++ ), j );
+		}
+	}
 
-    }
 }
