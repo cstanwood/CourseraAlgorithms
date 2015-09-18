@@ -4,50 +4,55 @@ import java.util.NoSuchElementException;
 public class Deque<Item> implements Iterable<Item>
 {
 
-    private int N;          // size of the stack
-    private Node first;
-    private Node last;
+	private int  N;          // size of the stack
+	private Node first;
+	private Node last;
 
-    // helper linked list class
-    private class Node
-    {
-        private Item item;
-        private Node previous = null;
-        private Node next = null;
-
-        Node()
-        {
-        }
-
-        Node( Item item )
-        {
-            this.item = item;
-        }
-    }
-
-    // construct an empty deque
-    public Deque()
-    {
-        first = null;
-        last = null;
-        N = 0;
-    }
-
-    // is the deque empty?
-    public boolean isEmpty()
-    {
-        return size() == 0;
-    }
-
-    // return the number of items on the deque
-    public int size()
-    {
-        return N;
-    }
-
-    // add the item to the front
-    public void addFirst( Item item )
+	// helper linked list class
+	private class Node
 	{
+		private Item item;
+		private Node previous = null;
+		private Node next     = null;
+
+		Node()
+		{
+		}
+
+		Node( Item item )
+		{
+			this.item = item;
+		}
+	}
+
+	// construct an empty deque
+	public Deque()
+	{
+		first = null;
+		last = null;
+		N = 0;
+	}
+
+	// is the deque empty?
+	public boolean isEmpty()
+	{
+		return size() == 0;
+	}
+
+	// return the number of items on the deque
+	public int size()
+	{
+		return N;
+	}
+
+	// add the item to the front
+	public void addFirst( Item item )
+	{
+		if ( item == null )
+		{
+			throw new NullPointerException();
+		}
+
 		Node newNode = new Node( item );
 		if ( isEmpty() )
 		{
@@ -65,9 +70,14 @@ public class Deque<Item> implements Iterable<Item>
 
 	}
 
-    // add the item to the end
-    public void addLast( Item item )
+	// add the item to the end
+	public void addLast( Item item )
 	{
+		if ( item == null )
+		{
+			throw new NullPointerException();
+		}
+
 		Node newNode = new Node( item );
 		if ( isEmpty() )
 		{
@@ -84,56 +94,56 @@ public class Deque<Item> implements Iterable<Item>
 		N++;
 	}
 
-    // remove and return the item from the front
-    public Item removeFirst()
-    {
-        if ( isEmpty() )
-        {
-            throw new NoSuchElementException( "Stack underflow" );
-        }
+	// remove and return the item from the front
+	public Item removeFirst()
+	{
+		if ( isEmpty() )
+		{
+			throw new NoSuchElementException( "Stack underflow" );
+		}
 
-        Item item = first.item;        // save item to return
-        if ( first.next != null )
-        {
-            Node second = first.next;
-            first.next = null;
-            second.previous = null;
-            first = second;
-        }
-        else
-        {
-            first = null;
-            last = null;
-        }
+		Item item = first.item;        // save item to return
+		if ( first.next != null )
+		{
+			Node second = first.next;
+			first.next = null;
+			second.previous = null;
+			first = second;
+		}
+		else
+		{
+			first = null;
+			last = null;
+		}
 
-        N--;
-        return item;                   // return the saved item
-    }
+		N--;
+		return item;                   // return the saved item
+	}
 
-    // remove and return the item from the end
-    public Item removeLast()
-    {
-        if ( isEmpty() )
-        {
-            throw new NoSuchElementException( "Stack underflow" );
-        }
-        Item item = last.item;        // save item to return
-        if ( last.previous != null )
-        {
-            last = last.previous;
-            last.next.previous = null;
-            last.next = null;
-        }
-        else
-        {
-            last = null;
-            first = null;
-        }
-        N--;
-        return item;                   // return the saved item
-    }
+	// remove and return the item from the end
+	public Item removeLast()
+	{
+		if ( isEmpty() )
+		{
+			throw new NoSuchElementException( "Stack underflow" );
+		}
+		Item item = last.item;        // save item to return
+		if ( last.previous != null )
+		{
+			last = last.previous;
+			last.next.previous = null;
+			last.next = null;
+		}
+		else
+		{
+			last = null;
+			first = null;
+		}
+		N--;
+		return item;                   // return the saved item
+	}
 
-    // return an iterator over items in order from front to end
+	// return an iterator over items in order from front to end
 	public Iterator<Item> iterator()
 	{
 		return new ListIterator();
@@ -166,9 +176,9 @@ public class Deque<Item> implements Iterable<Item>
 		}
 	}
 
-    // unit testing
-    public static void main( String[] args )
-    {
+	// unit testing
+	public static void main( String[] args )
+	{
 
-    }
+	}
 }

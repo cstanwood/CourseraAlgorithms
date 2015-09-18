@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72393af8-e20e-4a04-9537-31d835065612" name="Default" comment="" />
+    <list default="true" id="72393af8-e20e-4a04-9537-31d835065612" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Week2/src/main/java/Deque.java" afterPath="$PROJECT_DIR$/Week2/src/main/java/Deque.java" />
+    </list>
     <ignored path="CourseraAlgorithms.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,35 +27,43 @@
     <splitter split-orientation="horizontal" split-proportion="0.50375">
       <split-first>
         <leaf>
-          <file leaf-file-name="Deque.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Deque.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Week2/src/main/java/Deque.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="164" column="29" selection-start-line="164" selection-start-column="24" selection-end-line="164" selection-end-column="24" />
+                <state vertical-scroll-proportion="0.48873484">
+                  <caret line="79" column="51" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#451#452#0" expanded="true" />
-                    <element signature="e#491#492#0" expanded="true" />
-                    <element signature="e#682#683#0" expanded="true" />
-                    <element signature="e#716#717#0" expanded="true" />
-                    <element signature="e#792#793#0" expanded="true" />
-                    <element signature="e#816#817#0" expanded="true" />
-                    <element signature="e#2664#2665#0" expanded="true" />
-                    <element signature="e#2696#2697#0" expanded="true" />
-                    <element signature="e#2882#2883#0" expanded="true" />
-                    <element signature="e#2913#2914#0" expanded="true" />
-                    <element signature="e#2941#2942#0" expanded="true" />
-                    <element signature="e#2991#2992#0" expanded="true" />
+                    <element signature="e#2355#2356#0" expanded="true" />
+                    <element signature="e#2387#2388#0" expanded="true" />
+                    <element signature="e#2573#2574#0" expanded="true" />
+                    <element signature="e#2604#2605#0" expanded="true" />
+                    <element signature="e#2632#2633#0" expanded="true" />
+                    <element signature="e#2682#2683#0" expanded="true" />
+                    <marker date="1442594381279" expanded="true" signature="262:419" placeholder="{...}" />
+                    <marker date="1442594381279" expanded="true" signature="361:366" placeholder="{...}" />
+                    <marker date="1442594381279" expanded="true" signature="387:395" placeholder=" { " />
+                    <marker date="1442594381279" expanded="true" signature="412:416" placeholder=" }" />
+                    <marker date="1442594381279" expanded="true" signature="467:511" placeholder="{...}" />
+                    <marker date="1442594381279" expanded="true" signature="562:568" placeholder=" { " />
+                    <marker date="1442594381279" expanded="true" signature="587:590" placeholder=" }" />
+                    <marker date="1442594381279" expanded="true" signature="654:660" placeholder=" { " />
+                    <marker date="1442594381279" expanded="true" signature="669:672" placeholder=" }" />
+                    <marker date="1442594381279" expanded="true" signature="740:1011" placeholder="{...}" />
+                    <marker date="1442594381279" expanded="true" signature="1076:1343" placeholder="{...}" />
+                    <marker date="1442594381279" expanded="true" signature="1419:1812" placeholder="{...}" />
+                    <marker date="1442594381279" expanded="true" signature="1885:2257" placeholder="{...}" />
+                    <marker date="1442594381279" expanded="true" signature="2921:2926" placeholder="{...}" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="DequeTest.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="DequeTest.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Week2/src/test/java/DequeTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.41594455">
-                  <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="8" column="31" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#283#291#0" expanded="true" />
@@ -134,8 +144,8 @@
         <option value="$PROJECT_DIR$/Week2/src/ResizingArrayStack.java" />
         <option value="$PROJECT_DIR$/Week2/src/LinkedStack.java" />
         <option value="$PROJECT_DIR$/Week2/src/main/java/LinkedStack.java" />
-        <option value="$PROJECT_DIR$/Week2/src/main/java/Deque.java" />
         <option value="$PROJECT_DIR$/Week2/src/test/java/DequeTest.java" />
+        <option value="$PROJECT_DIR$/Week2/src/main/java/Deque.java" />
       </list>
     </option>
   </component>
@@ -538,7 +548,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1679" y="0" width="1922" height="1080" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32690248" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -546,7 +556,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3504823" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3504823" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3397642" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -887,32 +897,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Week2/src/main/java/Deque.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="164" column="29" selection-start-line="164" selection-start-column="24" selection-end-line="164" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#491#492#0" expanded="true" />
-            <element signature="e#682#683#0" expanded="true" />
-            <element signature="e#716#717#0" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
-            <element signature="e#816#817#0" expanded="true" />
-            <element signature="e#2664#2665#0" expanded="true" />
-            <element signature="e#2696#2697#0" expanded="true" />
-            <element signature="e#2882#2883#0" expanded="true" />
-            <element signature="e#2913#2914#0" expanded="true" />
-            <element signature="e#2941#2942#0" expanded="true" />
-            <element signature="e#2991#2992#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Week2/src/test/java/DequeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41594455">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="31" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#283#291#0" expanded="true" />
@@ -921,6 +909,36 @@
             <element signature="e#2427#2435#0" expanded="true" />
             <element signature="e#3198#3206#0" expanded="true" />
             <element signature="e#4135#4144#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Week2/src/main/java/Deque.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48873484">
+          <caret line="79" column="51" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2355#2356#0" expanded="true" />
+            <element signature="e#2387#2388#0" expanded="true" />
+            <element signature="e#2573#2574#0" expanded="true" />
+            <element signature="e#2604#2605#0" expanded="true" />
+            <element signature="e#2632#2633#0" expanded="true" />
+            <element signature="e#2682#2683#0" expanded="true" />
+            <marker date="1442594381279" expanded="true" signature="262:419" placeholder="{...}" />
+            <marker date="1442594381279" expanded="true" signature="361:366" placeholder="{...}" />
+            <marker date="1442594381279" expanded="true" signature="387:395" placeholder=" { " />
+            <marker date="1442594381279" expanded="true" signature="412:416" placeholder=" }" />
+            <marker date="1442594381279" expanded="true" signature="467:511" placeholder="{...}" />
+            <marker date="1442594381279" expanded="true" signature="562:568" placeholder=" { " />
+            <marker date="1442594381279" expanded="true" signature="587:590" placeholder=" }" />
+            <marker date="1442594381279" expanded="true" signature="654:660" placeholder=" { " />
+            <marker date="1442594381279" expanded="true" signature="669:672" placeholder=" }" />
+            <marker date="1442594381279" expanded="true" signature="740:1011" placeholder="{...}" />
+            <marker date="1442594381279" expanded="true" signature="1076:1343" placeholder="{...}" />
+            <marker date="1442594381279" expanded="true" signature="1419:1812" placeholder="{...}" />
+            <marker date="1442594381279" expanded="true" signature="1885:2257" placeholder="{...}" />
+            <marker date="1442594381279" expanded="true" signature="2921:2926" placeholder="{...}" />
           </folding>
         </state>
       </provider>
