@@ -98,7 +98,7 @@ public class LinkedStack<Item> implements Iterable<Item> {
 	public Item pop() {
 		if (isEmpty()) throw new NoSuchElementException("Stack underflow");
 		Item item = first.item;        // save item to return
-		first = first.next;            // delete first node
+		first = first.next;          // delete first node
 		N--;
 		assert check();
 		return item;                   // return the saved item
