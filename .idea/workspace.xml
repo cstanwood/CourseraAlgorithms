@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72393af8-e20e-4a04-9537-31d835065612" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Week2/src/main/java/Deque.java" afterPath="$PROJECT_DIR$/Week2/src/main/java/Deque.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Week2/src/test/java/DequeTest.java" afterPath="$PROJECT_DIR$/Week2/src/test/java/DequeTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="72393af8-e20e-4a04-9537-31d835065612" name="Default" comment="" />
     <ignored path="CourseraAlgorithms.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -585,7 +580,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Create files for Week2 assignment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create files for Week2 assignment" />
+    <MESSAGE value="Successful Implementation of part 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Successful Implementation of part 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
