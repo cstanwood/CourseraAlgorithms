@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b2fd06f9-d437-4693-8ddd-e9b7f0bcf7d8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week2/Week2.iml.orig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week2/src/LinkedStack.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Week2/src/ResizingArrayStack.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Week2/src/main/java/Deque.java" afterPath="$PROJECT_DIR$/../Week2/src/main/java/Deque.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Week2/src/test/java/DequeTest.java" afterPath="$PROJECT_DIR$/../Week2/src/test/java/DequeTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Week2/src/main/java/LinkedStack.java" afterPath="$PROJECT_DIR$/../Week2/src/main/java/LinkedStack.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Week2/Week2.iml" afterPath="$PROJECT_DIR$/../Week2/Week2.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Week2/src/main/java/Queue.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Week2/src/test/java/RandomizedQueueTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Week2/src/test/java/RandomizedQueueTest1.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Week2/src/test/java/ResizingArrayStackTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Week2/Deque$Node.class" afterPath="$PROJECT_DIR$/out/production/Week2/Deque$Node.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Week2/Deque.class" afterPath="$PROJECT_DIR$/out/production/Week2/Deque.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/Week2/DequeTest.class" afterPath="$PROJECT_DIR$/out/test/Week2/DequeTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Week2/RandomizedQueue.class" afterPath="$PROJECT_DIR$/out/production/Week2/RandomizedQueue.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Week1/percolation.zip" afterPath="$PROJECT_DIR$/out/production/Week1/percolation.zip" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Week2/src/main/java/RandomizedQueue.java" afterPath="$PROJECT_DIR$/../Week2/src/main/java/RandomizedQueue.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../Week2/src/main/java/Subset.java" afterPath="$PROJECT_DIR$/../Week2/src/main/java/Subset.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Percolation.iws" />
@@ -35,32 +39,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Deque.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../Week2/src/main/java/Deque.java">
+      <file leaf-file-name="RandomizedQueue.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Week2/src/main/java/RandomizedQueue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33147633">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#723#724#0" expanded="true" />
+                <element signature="e#758#759#0" expanded="true" />
+                <element signature="e#907#908#0" expanded="true" />
+                <element signature="e#941#942#0" expanded="true" />
+                <element signature="e#3027#3028#0" expanded="true" />
+                <element signature="e#3075#3076#0" expanded="true" />
+                <element signature="e#3619#3620#0" expanded="true" />
+                <element signature="e#3656#3657#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Subset.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../Week2/src/main/java/Subset.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.160221">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RandomizedQueueTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Week2/src/test/java/RandomizedQueueTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
               <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DequeTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Week2/src/test/java/DequeTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LinkedStack.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Week2/src/main/java/LinkedStack.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="102" column="21" selection-start-line="102" selection-start-column="21" selection-end-line="102" selection-end-column="21" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,6 +88,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit3 Test Class" />
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -92,8 +112,14 @@
         <option value="$PROJECT_DIR$/../Week2/src/ResizingArrayStack.java" />
         <option value="$PROJECT_DIR$/../Week2/src/LinkedStack.java" />
         <option value="$PROJECT_DIR$/../Week2/src/main/java/LinkedStack.java" />
-        <option value="$PROJECT_DIR$/../Week2/src/main/java/Deque.java" />
         <option value="$PROJECT_DIR$/../Week2/src/test/java/DequeTest.java" />
+        <option value="$PROJECT_DIR$/../Week2/src/main/java/Deque.java" />
+        <option value="$PROJECT_DIR$/../Week2/src/main/java/Queue.java" />
+        <option value="$PROJECT_DIR$/../Week2/src/test/java/ResizingArrayStackTest.java" />
+        <option value="$PROJECT_DIR$/../Week2/src/test/java/RandomizedQueueTest1.java" />
+        <option value="$PROJECT_DIR$/../Week2/src/test/java/RandomizedQueueTest.java" />
+        <option value="$PROJECT_DIR$/../Week2/src/main/java/RandomizedQueue.java" />
+        <option value="$PROJECT_DIR$/../Week2/src/main/java/Subset.java" />
       </list>
     </option>
   </component>
@@ -112,9 +138,9 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="width" value="1282" />
-    <option name="height" value="775" />
+    <option name="x" value="8" />
+    <option name="width" value="1272" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -303,9 +329,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -327,44 +353,47 @@
     <property name="dynamic.classpath" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resource" />
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+      <recent name="junit.framework.TestCase" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resource" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.DequeTest.testMultipleAddAndRemove">
-    <configuration default="false" name="DequeTest.testIsEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Subset">
+    <configuration default="false" name="Subset" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Week2" />
+      <option name="MAIN_CLASS_NAME" value="Subset" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="8" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DequeTest" />
-      <option name="METHOD_NAME" value="testIsEmpty" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
+      <module name="Week2" />
       <envs />
-      <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="DequeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ResizingArrayStackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Week2" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DequeTest" />
+      <option name="MAIN_CLASS_NAME" value="ResizingArrayStackTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -379,14 +408,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="DequeTest.testAddFirst" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="RandomizedQueueTest.testEnqueue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Week2" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DequeTest" />
-      <option name="METHOD_NAME" value="testAddFirst" />
+      <option name="MAIN_CLASS_NAME" value="RandomizedQueueTest" />
+      <option name="METHOD_NAME" value="testEnqueue" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -400,14 +429,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="DequeTest.testAddLast" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="RandomizedQueueTest.testSample" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Week2" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DequeTest" />
-      <option name="METHOD_NAME" value="testAddLast" />
+      <option name="MAIN_CLASS_NAME" value="RandomizedQueueTest" />
+      <option name="METHOD_NAME" value="testSample" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -421,14 +450,14 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="DequeTest.testMultipleAddAndRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="RandomizedQueueTest.testIterator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Week2" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="DequeTest" />
-      <option name="METHOD_NAME" value="testMultipleAddAndRemove" />
+      <option name="MAIN_CLASS_NAME" value="RandomizedQueueTest" />
+      <option name="METHOD_NAME" value="testIterator" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -884,19 +913,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.PercolationVisualizer" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.DequeTest.testIsEmpty" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.DequeTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.DequeTest.testAddFirst" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.DequeTest.testAddLast" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.DequeTest.testMultipleAddAndRemove" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Subset" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ResizingArrayStackTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.RandomizedQueueTest.testEnqueue" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.RandomizedQueueTest.testSample" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.RandomizedQueueTest.testIterator" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.DequeTest.testMultipleAddAndRemove" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.DequeTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.DequeTest.testAddLast" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.DequeTest.testAddFirst" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.DequeTest.testIsEmpty" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Subset" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.RandomizedQueueTest.testIterator" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.RandomizedQueueTest.testSample" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.RandomizedQueueTest.testEnqueue" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ResizingArrayStackTest" />
       </list>
     </recent_temporary>
   </component>
@@ -920,6 +949,7 @@
       <workItem from="1442535635034" duration="548000" />
       <workItem from="1442537134652" duration="5108000" />
       <workItem from="1442583168294" duration="2056000" />
+      <workItem from="1442684928854" duration="7387000" />
     </task>
     <task id="LOCAL-00001" summary="More updates&#10;">
       <created>1442106794841</created>
@@ -961,36 +991,36 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38027000" />
+    <option name="totallyTimeSpent" value="45414000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1282" height="775" extended-state="6" />
-    <editor active="false" />
+    <frame x="8" y="0" width="1272" height="772" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40215716" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4946071" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29578605" sideWeight="0.5053929" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21109399" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25885978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35308442" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25688818" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22609401" sideWeight="0.4946071" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30046225" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33006537" sideWeight="0.4946071" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39473686" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32973805" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3990755" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3990755" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1036,9 +1066,39 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/../Week2/src/main/java/Deque.java</url>
-          <line>109</line>
+          <line>89</line>
           <properties />
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../Week2/src/test/java/RandomizedQueueTest.java</url>
+          <line>98</line>
+          <properties />
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../Week2/src/test/java/RandomizedQueueTest.java</url>
+          <line>110</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../Week2/src/main/java/RandomizedQueue.java</url>
+          <line>132</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../Week2/src/main/java/RandomizedQueue.java</url>
+          <line>139</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../Week2/src/main/java/RandomizedQueue.java</url>
+          <line>159</line>
+          <properties />
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -1051,7 +1111,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="8" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1060,68 +1120,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Percolation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="128" column="29" selection-start-line="128" selection-start-column="29" selection-end-line="128" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PercolationStats.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="44" selection-start-line="69" selection-start-column="44" selection-end-line="69" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InteractivePercolationVisualizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Percolation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PercolationStats.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="44" selection-start-line="69" selection-start-column="44" selection-end-line="69" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/InteractivePercolationVisualizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Percolation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/bin/jdk1.8.0_40/src.zip!/java/lang/ClassLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="434" column="21" selection-start-line="434" selection-start-column="21" selection-end-line="434" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PercolationVisualizer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1375,17 +1373,100 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../Week2/src/test/java/DequeTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="113" column="0" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.21774194">
+          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Week2/src/main/java/Deque.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33147633">
-          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="97" column="29" selection-start-line="97" selection-start-column="29" selection-end-line="97" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Week2/src/main/java/Queue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+          <folding>
+            <element signature="e#165#166#0" expanded="true" />
+            <element signature="e#201#202#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Week2/src/main/java/ResizingArrayStack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Week2/src/test/java/ResizingArrayStackTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Week2/src/test/java/RandomizedQueueTest1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42352942">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Week2/src/test/java/RandomizedQueueTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Week2/src/main/java/RandomizedQueue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#723#724#0" expanded="true" />
+            <element signature="e#758#759#0" expanded="true" />
+            <element signature="e#907#908#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#3027#3028#0" expanded="true" />
+            <element signature="e#3075#3076#0" expanded="true" />
+            <element signature="e#3619#3620#0" expanded="true" />
+            <element signature="e#3656#3657#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Week2/src/main/java/Subset.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.160221">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
