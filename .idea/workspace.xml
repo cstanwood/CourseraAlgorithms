@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72393af8-e20e-4a04-9537-31d835065612" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Week2/src/main/java/Deque.java" afterPath="$PROJECT_DIR$/Week2/src/main/java/Deque.java" />
-    </list>
+    <list default="true" id="72393af8-e20e-4a04-9537-31d835065612" name="Default" comment="" />
     <ignored path="CourseraAlgorithms.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,26 +32,18 @@
                   <caret line="79" column="51" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
+                    <element signature="e#390#391#0" expanded="true" />
+                    <element signature="e#415#416#0" expanded="true" />
+                    <element signature="e#564#565#0" expanded="true" />
+                    <element signature="e#589#590#0" expanded="true" />
+                    <element signature="e#656#657#0" expanded="true" />
+                    <element signature="e#671#672#0" expanded="true" />
                     <element signature="e#2355#2356#0" expanded="true" />
                     <element signature="e#2387#2388#0" expanded="true" />
                     <element signature="e#2573#2574#0" expanded="true" />
                     <element signature="e#2604#2605#0" expanded="true" />
                     <element signature="e#2632#2633#0" expanded="true" />
                     <element signature="e#2682#2683#0" expanded="true" />
-                    <marker date="1442594381279" expanded="true" signature="262:419" placeholder="{...}" />
-                    <marker date="1442594381279" expanded="true" signature="361:366" placeholder="{...}" />
-                    <marker date="1442594381279" expanded="true" signature="387:395" placeholder=" { " />
-                    <marker date="1442594381279" expanded="true" signature="412:416" placeholder=" }" />
-                    <marker date="1442594381279" expanded="true" signature="467:511" placeholder="{...}" />
-                    <marker date="1442594381279" expanded="true" signature="562:568" placeholder=" { " />
-                    <marker date="1442594381279" expanded="true" signature="587:590" placeholder=" }" />
-                    <marker date="1442594381279" expanded="true" signature="654:660" placeholder=" { " />
-                    <marker date="1442594381279" expanded="true" signature="669:672" placeholder=" }" />
-                    <marker date="1442594381279" expanded="true" signature="740:1011" placeholder="{...}" />
-                    <marker date="1442594381279" expanded="true" signature="1076:1343" placeholder="{...}" />
-                    <marker date="1442594381279" expanded="true" signature="1419:1812" placeholder="{...}" />
-                    <marker date="1442594381279" expanded="true" signature="1885:2257" placeholder="{...}" />
-                    <marker date="1442594381279" expanded="true" signature="2921:2926" placeholder="{...}" />
                   </folding>
                 </state>
               </provider>
@@ -919,26 +909,18 @@
           <caret line="79" column="51" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#415#416#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+            <element signature="e#656#657#0" expanded="true" />
+            <element signature="e#671#672#0" expanded="true" />
             <element signature="e#2355#2356#0" expanded="true" />
             <element signature="e#2387#2388#0" expanded="true" />
             <element signature="e#2573#2574#0" expanded="true" />
             <element signature="e#2604#2605#0" expanded="true" />
             <element signature="e#2632#2633#0" expanded="true" />
             <element signature="e#2682#2683#0" expanded="true" />
-            <marker date="1442594381279" expanded="true" signature="262:419" placeholder="{...}" />
-            <marker date="1442594381279" expanded="true" signature="361:366" placeholder="{...}" />
-            <marker date="1442594381279" expanded="true" signature="387:395" placeholder=" { " />
-            <marker date="1442594381279" expanded="true" signature="412:416" placeholder=" }" />
-            <marker date="1442594381279" expanded="true" signature="467:511" placeholder="{...}" />
-            <marker date="1442594381279" expanded="true" signature="562:568" placeholder=" { " />
-            <marker date="1442594381279" expanded="true" signature="587:590" placeholder=" }" />
-            <marker date="1442594381279" expanded="true" signature="654:660" placeholder=" { " />
-            <marker date="1442594381279" expanded="true" signature="669:672" placeholder=" }" />
-            <marker date="1442594381279" expanded="true" signature="740:1011" placeholder="{...}" />
-            <marker date="1442594381279" expanded="true" signature="1076:1343" placeholder="{...}" />
-            <marker date="1442594381279" expanded="true" signature="1419:1812" placeholder="{...}" />
-            <marker date="1442594381279" expanded="true" signature="1885:2257" placeholder="{...}" />
-            <marker date="1442594381279" expanded="true" signature="2921:2926" placeholder="{...}" />
           </folding>
         </state>
       </provider>
