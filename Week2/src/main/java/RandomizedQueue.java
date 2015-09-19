@@ -1,5 +1,3 @@
-import edu.princeton.cs.algs4.StdIn;
-import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 
 import java.util.Iterator;
@@ -12,7 +10,7 @@ public class RandomizedQueue<Item> implements Iterable<Item>
     private int start;          // first item in array
     private int end;            // last item in array + 1
 
-F    /**
+    /**
      * Initializes an empty stack.
      */
     public RandomizedQueue()
