@@ -12,7 +12,7 @@ public class RandomizedQueue<Item> implements Iterable<Item>
     private int start;          // first item in array
     private int end;            // last item in array + 1
 
-    /**
+F    /**
      * Initializes an empty stack.
      */
     public RandomizedQueue()
@@ -166,20 +166,7 @@ public class RandomizedQueue<Item> implements Iterable<Item>
      */
     public static void main( String[] args )
     {
-        ResizingArrayStack<String> s = new ResizingArrayStack<String>();
-        while ( !StdIn.isEmpty() )
-        {
-            String item = StdIn.readString();
-            if ( !item.equals( "-" ) )
-            {
-                s.push( item );
-            }
-            else if ( !s.isEmpty() )
-            {
-                StdOut.print( s.pop() + " " );
-            }
-        }
-        StdOut.println( "(" + s.size() + " left on stack)" );
+
     }
 
 }
