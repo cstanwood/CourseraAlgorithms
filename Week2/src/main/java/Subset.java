@@ -20,11 +20,11 @@ public class Subset
         int i = 0;
         for ( String s : queue )
         {
-            StdOut.println( s );
-            if (++i >= k)
+            if (i++ >= k)
             {
                 break;
             }
+            StdOut.println( s );
         }
     }
 }
