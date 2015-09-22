@@ -37,6 +37,7 @@ public class Point implements Comparable<Point>
     {
         /* DO NOT MODIFY */
         StdDraw.point( x, y );
+
     }
 
     /**
@@ -63,10 +64,26 @@ public class Point implements Comparable<Point>
      * @return the slope between this point and the specified point
      */
     public double slopeTo( Point that )
-    {
-        /* YOUR CODE HERE */
-        return 0;
-    }
+	{
+		/* YOUR CODE HERE */
+		if ( this.compareTo( that ) == 0 )
+		{
+			return Double.NEGATIVE_INFINITY;
+		}
+		else if ( this.y == that.y ) // horizontal
+		{
+			return +0.0;
+		}
+		else if ( this.x == that.x ) //vertical
+		{
+			return Double.POSITIVE_INFINITY;
+		}
+		else
+		{
+			return ( that.y - this.y ) / ( that.x - this.x );
+		}
+
+	}
 
     /**
      * Compares two points by y-coordinate, breaking ties by x-coordinate.
@@ -81,10 +98,20 @@ public class Point implements Comparable<Point>
      *         argument point
      */
     public int compareTo( Point that )
-    {
-        /* YOUR CODE HERE */
-        return 0;
-    }
+	{
+		if ( this.y != that.y )
+		{
+			return this.y - that.y;
+		}
+		else if ( this.x != that.x )
+		{
+			return this.x - that.x;
+		}
+		else
+		{
+			return 0;
+		}
+	}
 
     /**
      * Compares two points by the slope they make with this point.

@@ -6,8 +6,6 @@
       <module fileurl="file://$PROJECT_DIR$/Week1/Week1.iml" filepath="$PROJECT_DIR$/Week1/Week1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Week2/Week2.iml" filepath="$PROJECT_DIR$/Week2/Week2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Week3/Week3.iml" filepath="$PROJECT_DIR$/Week3/Week3.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Week3/src/main/main.iml" filepath="$PROJECT_DIR$/Week3/src/main/main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Week3/resource/resource.iml" filepath="$PROJECT_DIR$/Week3/resource/resource.iml" />
     </modules>
   </component>
 </project>
