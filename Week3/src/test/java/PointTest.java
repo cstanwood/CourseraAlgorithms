@@ -63,7 +63,7 @@ public class PointTest
     @org.junit.Test
     public void testSlopeOrder() throws Exception
     {
-        Point p1 = new Point( 0, 0 );
+/*        Point p1 = new Point( 0, 0 );
 
         Point p2 = new Point( 1, 1 );
         Point p3 = new Point( 2, 1 );
@@ -78,7 +78,32 @@ public class PointTest
         assertEquals( p3, points[ 0 ] );
         assertEquals( p2, points[ 1 ] );
         assertEquals( p5, points[ 2 ] );
-        assertEquals( p4, points[ 3 ] );
+        assertEquals( p4, points[ 3 ] );*/
+
+		Point q0 = new Point( -2, -4 );
+		Point q1 = new Point( -2, 1 );
+		Point q2 = new Point( 2, -4 );
+		Point q3 = new Point( 3, -3 );
+		Point q4 = new Point( -4, 2 );
+		Point q5 = new Point( -2, -2 );
+		Point q6 = new Point( -2, 5 );
+		Point q7 = new Point( 1, 4 );
+		Point[] morePoints = {q0, q1, q2, q3, q4, q5, q6, q7};
+		Arrays.sort( morePoints );
+		Comparator<Point> slopeOrder = q0.slopeOrder();
+		Arrays.sort( morePoints, 1, 7, slopeOrder );
+
+		assertEquals( q0, morePoints[ 0 ] );
+		assertEquals( q4, morePoints[ 1 ] );
+		assertEquals( q2, morePoints[ 2 ] );
+		assertEquals( q3, morePoints[ 3 ] );
+		assertEquals( q7, morePoints[ 4 ] );
+		assertEquals( q5, morePoints[ 5 ] );
+		assertEquals( q1, morePoints[ 6 ] );
+		assertEquals( q6, morePoints[ 7 ] );
+
+
+
 
 
     }

@@ -65,7 +65,6 @@ public class Point implements Comparable<Point>
      */
     public double slopeTo( Point that )
 	{
-		/* YOUR CODE HERE */
 		if ( this.compareTo( that ) == 0 )
 		{
 			return Double.NEGATIVE_INFINITY;
@@ -120,7 +119,6 @@ public class Point implements Comparable<Point>
      */
     public Comparator<Point> slopeOrder()
     {
-        /* YOUR CODE HERE */
         return new BySlope();
     }
 
@@ -137,7 +135,7 @@ public class Point implements Comparable<Point>
             }
             else if ( slope1 > slope2 )
             {
-                return + 1;
+                return 1;
             }
             else
             {
