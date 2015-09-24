@@ -16,22 +16,11 @@ public class BruteCollinearPoints
     {
         this.points = points;
         Arrays.sort( points );
-    }
 
-    // the number of line segments
-    public int numberOfSegments()
-    {
-
-        return 0;
-    }
-
-    // the line segments
-    public LineSegment[] segments()
-    {
         // assume there are no line segments with more than 4 points
 
         final int N = points.length;
-        LinkedStack<LineSegment> lineSegments = new LinkedStack<>();
+        LinkedStack<LineSegment> lineSegmentStack = new LinkedStack<>();
 
         for ( int i = 0; i < N - 3; i ++ )
         {
@@ -45,7 +34,7 @@ public class BruteCollinearPoints
                         {
                             if ( points[ j ].slopeTo( points[ k ] ) == points[ k ].slopeTo( points[ l ] ) )
                             {
-                                lineSegments.push( new LineSegment( points[ i ], points[ l ] ) );
+                                lineSegmentStack.push( new LineSegment( points[ i ], points[ l ] ) );
                             }
                         }
                     }
@@ -54,15 +43,27 @@ public class BruteCollinearPoints
         }
 
         // need to return an array
-        LineSegment[] lineSegmentArray = new LineSegment[ lineSegments.size() ];
-//        return lineSegments.toArray( lineSegmentArray  );
+        lineSegments = new LineSegment[ lineSegmentStack.size() ];
+//        return lineSegmentStack.toArray( lineSegmentArray  );
 
         int i = 0;
-        for ( LineSegment lineSegment : lineSegments )
+        for ( LineSegment lineSegment : lineSegmentStack )
         {
-            lineSegmentArray[i++] = lineSegment;
+            lineSegments[i++] = lineSegment;
         }
-        return lineSegmentArray;
+
+    }
+
+    // the number of line segments
+    public int numberOfSegments()
+    {
+        return lineSegments.length;
+    }
+
+    // the line segments
+    public LineSegment[] segments()
+    {
+        return lineSegments;
     }
 
 }
