@@ -49,17 +49,48 @@ public class LineSegment {
         return p + " -> " + q;
     }
 
-    /**
+/*    *//**
      * Throws an exception if called. The hashCode() method is not supported because
      * hashing has not yet been introduced in this course. Moreover, hashing does not
      * typically lead to good *worst-case* performance guarantees, as required on this
      * asssignment.
      *
      * @throws UnsupportedOperationException if called
-     */
+     *//*
     public int hashCode() {
         throw new UnsupportedOperationException();
+    }*/
+
+
+    // For testing. Remove this code before submission.
+    @Override
+    public boolean equals( Object o )
+    {
+        if ( this == o )
+        {
+            return true;
+        }
+        if ( o == null || getClass() != o.getClass() )
+        {
+            return false;
+        }
+
+        LineSegment that = (LineSegment) o;
+
+        if ( !p.equals( that.p ) )
+        {
+            return false;
+        }
+        return q.equals( that.q );
+
     }
 
+    @Override
+    public int hashCode()
+    {
+        int result = p.hashCode();
+        result = 31 * result + q.hashCode();
+        return result;
+    }
 }
 

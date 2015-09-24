@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Comparator;
 
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
@@ -33,7 +34,7 @@ public class PointTest
     }
 
 	@org.junit.Test
-	public void testSlopeOrder() throws Exception
+	public void testSlopeTo() throws Exception
 	{
 		Point p1 = new Point( 1, 1 );
 		Point p2 = new Point( 1, 1 );
@@ -57,7 +58,28 @@ public class PointTest
 
         assertEquals( 0.5, p3.slopeTo( p6 ) );
 
-
-
 	}
+
+    @org.junit.Test
+    public void testSlopeOrder() throws Exception
+    {
+        Point p1 = new Point( 0, 0 );
+
+        Point p2 = new Point( 1, 1 );
+        Point p3 = new Point( 2, 1 );
+        Point p4 = new Point( 1, 2 );
+        Point p5 = new Point( 1, 1 );
+
+        Comparator<Point> slopeOrder = p1.slopeOrder();
+        Point[] points = { p2, p3, p4, p5 };
+
+        Arrays.sort( points, slopeOrder );
+
+        assertEquals( p3, points[ 0 ] );
+        assertEquals( p2, points[ 1 ] );
+        assertEquals( p5, points[ 2 ] );
+        assertEquals( p4, points[ 3 ] );
+
+
+    }
 }

@@ -121,7 +121,29 @@ public class Point implements Comparable<Point>
     public Comparator<Point> slopeOrder()
     {
         /* YOUR CODE HERE */
-        return null;
+        return new BySlope();
+    }
+
+    private class BySlope implements Comparator<Point>
+    {
+        @Override
+        public int compare( Point o1, Point o2 )
+        {
+            double slope1 = slopeTo( o1 );
+            double slope2 = slopeTo( o2 );
+            if ( slope1 < slope2  )
+            {
+                return -1;
+            }
+            else if ( slope1 > slope2 )
+            {
+                return + 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
     }
 
 
