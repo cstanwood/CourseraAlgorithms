@@ -127,8 +127,8 @@ public class Point implements Comparable<Point>
         @Override
         public int compare( Point o1, Point o2 )
         {
-            double slope1 = slopeTo( o1 );
-            double slope2 = slopeTo( o2 );
+            double slope1 = Point.this.slopeTo( o1 );
+            double slope2 = Point.this.slopeTo( o2 );
             if ( slope1 < slope2  )
             {
                 return -1;
@@ -144,6 +144,35 @@ public class Point implements Comparable<Point>
         }
     }
 
+    @Override
+    public boolean equals( Object o )
+    {
+        if ( this == o )
+        {
+            return true;
+        }
+        if ( o == null || getClass() != o.getClass() )
+        {
+            return false;
+        }
+
+        Point point = (Point) o;
+
+        if ( x != point.x )
+        {
+            return false;
+        }
+        return y == point.y;
+
+    }
+
+    @Override
+    public int hashCode()
+    {
+        int result = x;
+        result = 31 * result + y;
+        return result;
+    }
 
     /**
      * Returns a string representation of this point.

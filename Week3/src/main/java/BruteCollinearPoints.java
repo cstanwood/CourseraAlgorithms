@@ -14,6 +14,26 @@ public class BruteCollinearPoints
     // finds all line segments containing 4 points
     public BruteCollinearPoints( Point[] points )
     {
+        if ( points == null )
+        {
+            throw new NullPointerException();
+        }
+        for ( Point point : points )
+        {
+            if ( point == null )
+            {
+                throw new NullPointerException();
+            }
+        }
+        Arrays.sort( points );
+        for ( int i = 0; i < points.length - 1; i++ )
+        {
+            if ( points[ i ].equals( points[ i + 1 ] ) )
+            {
+                throw new IllegalArgumentException();
+            }
+        }
+
         this.points = points;
         Arrays.sort( points );
 
@@ -22,7 +42,7 @@ public class BruteCollinearPoints
         final int N = points.length;
         LinkedStack<LineSegment> lineSegmentStack = new LinkedStack<>();
 
-        for ( int i = 0; i < N - 3; i ++ )
+        for ( int i = 0; i < N - 3; i++ )
         {
             for ( int j = i + 1; j < N - 2; j++ )
             {
@@ -49,7 +69,7 @@ public class BruteCollinearPoints
         int i = 0;
         for ( LineSegment lineSegment : lineSegmentStack )
         {
-            lineSegments[i++] = lineSegment;
+            lineSegments[ i++ ] = lineSegment;
         }
 
     }
