@@ -211,6 +211,29 @@ public class FastCollinearPointsTest
     }
 
     @Test
+    public void testFivePoints() throws Exception
+    {
+        Point p1 = new Point( -2, -2 );
+        Point p2 = new Point( -1, -1 );
+        Point p3 = new Point( 0, 0 );
+        Point p4 = new Point( 1, 1 );
+        Point p5 = new Point( 2, 2 );
+
+        Point[] points = { p1, p2, p3, p4, p5 };
+
+        StdRandom.shuffle( points );
+
+        FastCollinearPoints fast = new FastCollinearPoints( points );
+
+        LineSegment[] fastSegments = fast.segments();
+
+        LineSegment mySegment = new LineSegment( p1, p5 );
+        assertTrue( fastSegments.length == 1 );
+        assertTrue( mySegment.equals( fastSegments[ 0 ] ) );
+
+    }
+
+    @Test
     public void testMultipleSegments() throws Exception
     {
         Point p1 = new Point( -3, 0 );
@@ -268,16 +291,18 @@ public class FastCollinearPointsTest
 
         LineSegment[] fastSegments = fast.segments();
 
-        LineSegment[] mySegments = new LineSegment[ 7 ];
-        mySegments[ 0 ] = new LineSegment( p4, p14 );
-        mySegments[ 1 ] = new LineSegment( p1, p21 );
-        mySegments[ 2 ] = new LineSegment( p18, p4 );
-        mySegments[ 3 ] = new LineSegment( p13, p9 );
-        mySegments[ 4 ] = new LineSegment( p2, p23 );
-        mySegments[ 5 ] = new LineSegment( p22, p5 );
-        mySegments[ 6 ] = new LineSegment( p6, p3 );
+        LineSegment[] mySegments = new LineSegment[ 9 ];
+        mySegments[ 0 ] = new LineSegment( p19, p5 );
+        mySegments[ 1 ] = new LineSegment( p22, p5 );
+        mySegments[ 2 ] = new LineSegment( p13, p9 );
+        mySegments[ 3 ] = new LineSegment( p4, p14 );
+        mySegments[ 4 ] = new LineSegment( p18, p4 );
+        mySegments[ 5 ] = new LineSegment( p6, p3 );
+        mySegments[ 6 ] = new LineSegment( p6, p14 );
+        mySegments[ 7 ] = new LineSegment( p2, p23 );
+        mySegments[ 8 ] = new LineSegment( p1, p21 );
 
-        assertTrue( fastSegments.length == 11 );
+        assertTrue( fastSegments.length == 9 );
 
 // Line segments with >4 points are NOT working correctly
 

@@ -10,6 +10,7 @@ public class BruteCollinearPoints
 {
     private Point[] points;
     private LineSegment[] lineSegments;
+    private boolean calculationDone;
 
     // finds all line segments containing 4 points
     public BruteCollinearPoints( Point[] points )
@@ -35,6 +36,13 @@ public class BruteCollinearPoints
         }
 
         this.points = points;
+
+
+
+    }
+
+    private void calculateSegments( Point[] points )
+    {
         Arrays.sort( points );
 
         // assume there are no line segments with more than 4 points
@@ -64,7 +72,6 @@ public class BruteCollinearPoints
 
         // need to return an array
         lineSegments = new LineSegment[ lineSegmentStack.size() ];
-//        return lineSegmentStack.toArray( lineSegmentArray  );
 
         int i = 0;
         for ( LineSegment lineSegment : lineSegmentStack )
@@ -72,17 +79,26 @@ public class BruteCollinearPoints
             lineSegments[ i++ ] = lineSegment;
         }
 
+        calculationDone = true;
     }
 
     // the number of line segments
     public int numberOfSegments()
     {
+        if ( !calculationDone )
+        {
+            calculateSegments( points );
+        }
         return lineSegments.length;
     }
 
     // the line segments
     public LineSegment[] segments()
     {
+        if ( !calculationDone )
+        {
+            calculateSegments( points );
+        }
         return lineSegments;
     }
 

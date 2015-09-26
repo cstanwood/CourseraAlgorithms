@@ -1,13 +1,14 @@
-import edu.princeton.cs.algs4.LinkedStack;
-
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.HashSet;
+import java.util.Set;
 
 public class FastCollinearPoints
 {
 
     private Point[] points;
     private LineSegment[] lineSegments;
+    private boolean calculationDone;
 
     // finds all line segments containing 4 or more points
     public FastCollinearPoints( Point[] points )
@@ -33,16 +34,82 @@ public class FastCollinearPoints
             }
         }
 
-
         this.points = points;
+    }
 
+    private class PotentialSegment
+    {
+        private Point p1;
+        private Point p2;
+        private double slope;
+
+        PotentialSegment( Point p1, Point p2 )
+        {
+            this.p1 = p1;
+            this.p2 = p2;
+            slope = p1.slopeTo( p2 );
+        }
+
+        public Point getP1()
+        {
+            return p1;
+        }
+
+        public Point getP2()
+        {
+            return p2;
+        }
+
+        @Override
+        public boolean equals( Object o )
+        {
+            if ( this == o )
+            {
+                return true;
+            }
+            if ( o == null || getClass() != o.getClass() )
+            {
+                return false;
+            }
+
+            PotentialSegment that = (PotentialSegment) o;
+
+            if ( Double.compare( that.slope, slope ) != 0 )
+            {
+                return false;
+            }
+            return p2.equals( that.p2 );
+
+        }
+
+        @Override
+        public int hashCode()
+        {
+            int result;
+            long temp;
+            result = p2.hashCode();
+            temp = Double.doubleToLongBits( slope );
+            result = 31 * result + (int) ( temp ^ ( temp >>> 32 ) );
+            return result;
+        }
+    }
+
+    private void calculateSegments( Point[] points )
+    {
         final int N = points.length;
-        LinkedStack<LineSegment> lineSegmentStack = new LinkedStack<>();
+//        LinkedStack<LineSegment> lineSegmentStack = new LinkedStack<>();
+//        ArrayList<PotentialSegment> segmentTracker = new ArrayList<>();
+        Set<PotentialSegment> segmentTracker = new HashSet<PotentialSegment>();
 
         int j;
 
         for ( int i = 0; i < N - 3; i++ )
         {
+//            Point[] tempPoints = Arrays.copyOf( points, points.length );
+//            Point temp = tempPoints[ 0 ];
+//            tempPoints[ 0 ] = tempPoints[ i ];
+//            tempPoints[ i ] = temp;
+
             Arrays.sort( points, i, N ); // first order by points
             Comparator<Point> bySlope = points[ i ].slopeOrder();
             Arrays.sort( points, i + 1, N, bySlope ); //sort is stable ...
@@ -73,13 +140,23 @@ public class FastCollinearPoints
 
                 if ( j - k + 2 >= 4 ) // got a segment
                 {
-                    lineSegmentStack.push( new LineSegment( points[ i ], points[ j ] ) );
+                    segmentTracker.add( new PotentialSegment( points[ i ], points[ j ] ) );
+//                    lineSegmentStack.push( new LineSegment( tempPoints[ i ], tempPoints[ j ] ) );
+//                    Point[] allPotentialPoints =
                 }
             }
-
-
         }
 
+        PotentialSegment[] potentialSegments = new PotentialSegment[ segmentTracker.size() ];
+        segmentTracker.toArray( potentialSegments );
+
+        lineSegments = new LineSegment[ potentialSegments.length ];
+        for ( int i = 0; i < potentialSegments.length; i++ )
+        {
+            lineSegments[ i ] = new LineSegment( potentialSegments[ i ].p1, potentialSegments[ i ].p2 );
+        }
+
+/*
         // need to return an array
         lineSegments = new LineSegment[ lineSegmentStack.size() ];
         //        return lineSegmentStack.toArray( lineSegmentArray  );
@@ -89,18 +166,28 @@ public class FastCollinearPoints
         {
             lineSegments[ k++ ] = lineSegment;
         }
+*/
 
+        calculationDone = true;
     }
 
     // the number of line segments
     public int numberOfSegments()
     {
+        if ( !calculationDone )
+        {
+            calculateSegments( points );
+        }
         return lineSegments.length;
     }
 
     // the line segments
     public LineSegment[] segments()
     {
+        if ( !calculationDone )
+        {
+            calculateSegments( points );
+        }
         return lineSegments;
     }
 }
