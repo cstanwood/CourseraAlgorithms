@@ -26,18 +26,18 @@ public class BruteCollinearPoints
                 throw new NullPointerException();
             }
         }
-        Arrays.sort( points );
-        for ( int i = 0; i < points.length - 1; i++ )
+
+        this.points = new Point[ points.length ];
+        this.points = Arrays.copyOf( points, points.length );
+
+        Arrays.sort( this.points );
+        for ( int i = 0; i < this.points.length - 1; i++ )
         {
-            if ( points[ i ].equals( points[ i + 1 ] ) )
+            if ( this.points[ i ].equals( this.points[ i + 1 ] ) )
             {
                 throw new IllegalArgumentException();
             }
         }
-
-        this.points = points;
-
-
 
     }
 

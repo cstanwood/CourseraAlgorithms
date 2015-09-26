@@ -1,7 +1,4 @@
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class FastCollinearPoints
 {
@@ -25,19 +22,21 @@ public class FastCollinearPoints
             }
         }
 
-        Arrays.sort( points );
-        for ( int i = 0; i < points.length - 1; i++ )
+        this.points = new Point[ points.length ];
+        this.points = Arrays.copyOf( points, points.length );
+
+        Arrays.sort( this.points );
+        for ( int i = 0; i < this.points.length - 1; i++ )
         {
-            if ( points[ i ].equals( points[ i + 1 ] ) )
+            if ( this.points[ i ].equals( this.points[ i + 1 ] ) )
             {
                 throw new IllegalArgumentException();
             }
         }
 
-        this.points = points;
     }
 
-    private class PotentialSegment
+    private class PotentialSegment implements Comparable<PotentialSegment>
     {
         private Point p1;
         private Point p2;
@@ -92,6 +91,30 @@ public class FastCollinearPoints
             result = 31 * result + (int) ( temp ^ ( temp >>> 32 ) );
             return result;
         }
+
+        @Override
+        public int compareTo( PotentialSegment that )
+        {
+            if (this.p2.compareTo( that.p2 )== 0)
+            {
+                if ( this.slope < that.slope )
+                {
+                    return -1;
+                }
+                else if ( this.slope > that.slope )
+                {
+                    return +1;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            else
+            {
+                return this.p2.compareTo( that.p2 );
+            }
+        }
     }
 
     private void calculateSegments( Point[] points )
@@ -99,7 +122,7 @@ public class FastCollinearPoints
         final int N = points.length;
 //        LinkedStack<LineSegment> lineSegmentStack = new LinkedStack<>();
 //        ArrayList<PotentialSegment> segmentTracker = new ArrayList<>();
-        Set<PotentialSegment> segmentTracker = new HashSet<PotentialSegment>();
+        Set<PotentialSegment> segmentTracker = new TreeSet<PotentialSegment>();
 
         int j;
 
