@@ -17,6 +17,16 @@ public class Point implements Comparable<Point>
     private final int x;     // x-coordinate of this point
     private final int y;     // y-coordinate of this point
 
+    public int getX()
+    {
+        return x;
+    }
+
+    public int getY()
+    {
+        return y;
+    }
+
     /**
      * Initializes a new point.
      *

@@ -23,7 +23,10 @@ public class FastCollinearPoints
         }
 
         this.points = new Point[ points.length ];
-        this.points = Arrays.copyOf( points, points.length );
+        for(int i=0; i< points.length; i++)
+        {
+            this.points[ i ] = new Point( points[ i ].getX(), points[ i ].getY() );
+        }
 
         Arrays.sort( this.points );
         for ( int i = 0; i < this.points.length - 1; i++ )
