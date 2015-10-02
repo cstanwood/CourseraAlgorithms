@@ -181,7 +181,7 @@ public class Board
 		{
 			blocks[ row ][ col ] = blocks[ row + 1 ][ col ];
 			blocks[ row + 1 ][ col ] = 0;
-			right = new Board( blocks );
+			bottom = new Board( blocks );
 			blocks[ row + 1 ][ col ] = blocks[ row ][ col ];
 			blocks[ row ][ col ] = 0;
 		}
