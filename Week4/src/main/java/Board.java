@@ -201,7 +201,7 @@ public class Board
 		}
 		if ( bottom != null )
 		{
-			neighbors.add( left );
+			neighbors.add( bottom );
 		}
 		return neighbors;
 	}
@@ -220,26 +220,25 @@ public class Board
 					return space;
 				}
 			}
-
 		}
 		return null;
 	}
 
-
 	// string representation of this board (in the output format specified below)
 	public String toString()
-	{
-		StringBuilder output = new StringBuilder( String.format( "%d\n", dimension() ) );
-		for ( int i = 0; i < blocks.length; i++ )
-		{
-			for ( int j = 0; j < blocks.length; j++ )
-			{
-				output.append( String.format( "%3d", blocks[ i ][ j ] ) );
-			}
-			output.append( "\n" );
-		}
-		return output.toString();
-	}
+    {
+        StringBuilder output =
+                new StringBuilder( String.format( "%d\t%d\t%d\n", dimension(), hamming(), manhattan() ) );
+        for ( int i = 0; i < blocks.length; i++ )
+        {
+            for ( int j = 0; j < blocks.length; j++ )
+            {
+                output.append( String.format( "%2d", blocks[ i ][ j ] ) );
+            }
+            output.append( "\n" );
+        }
+        return output.toString();
+    }
 
 	// unit tests (not graded)
 	public static void main( String[] args )

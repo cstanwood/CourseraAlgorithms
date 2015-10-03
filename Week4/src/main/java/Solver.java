@@ -1,42 +1,24 @@
-import edu.princeton.cs.algs4.In;
-import edu.princeton.cs.algs4.MinPQ;
-import edu.princeton.cs.algs4.Queue;
-import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.*;
 
 import java.util.Comparator;
 
 public class Solver
 {
 
-    int moves;
     SearchNode currentNode;
+    boolean solvable = true;
 
     private class SearchNode
     {
-        Board board;
+        private Board board;
         int moves = 0;
-        SearchNode previous;
+        SearchNode previousNode;
 
         SearchNode( Board board, int moves, SearchNode previous )
         {
             this.board = board;
             this.moves = moves;
-            this.previous = previous;
-        }
-
-        Board getBoard()
-        {
-            return board;
-        }
-
-        int getMoves()
-        {
-            return moves;
-        }
-
-        SearchNode getPrevious()
-        {
-            return previous;
+            this.previousNode = previous;
         }
 
     }
@@ -46,8 +28,8 @@ public class Solver
         @Override
         public int compare( SearchNode node1, SearchNode node2 )
         {
-            int manhattan1 = node1.getBoard().manhattan() + node1.getMoves();
-            int manhattan2 = node2.getBoard().manhattan() + node2.getMoves();
+            int manhattan1 = node1.board.manhattan() + node1.moves;
+            int manhattan2 = node2.board.manhattan() + node2.moves;
             if ( manhattan1 < manhattan2 )
             {
                 return -1;
@@ -63,55 +45,61 @@ public class Solver
         }
     }
 
-    private MinPQ<SearchNode> nodes;
-
     // find a solution to the initial board (using the A* algorithm)
     public Solver( Board initial )
     {
         Comparator<SearchNode> nodeComparator = new ByManhattan();
-        nodes = new MinPQ<SearchNode>( nodeComparator );
+        MinPQ<SearchNode> nodes = new MinPQ<SearchNode>( nodeComparator );
 
-        moves = 0;
-        nodes.insert( new SearchNode( initial, moves++, null ) );
+        currentNode = new SearchNode( initial, 0, null );
+        if ( initial.isGoal() )
+        {
+            return;
+        }
+        Iterable<Board> neighbours = currentNode.board.neighbors();
+        for (Board neighbour : neighbours)
+        {
+            nodes.insert( ( new SearchNode( neighbour, 1, currentNode ) ) );
+        }
         currentNode = nodes.delMin();
 
-        while ( !currentNode.getBoard().isGoal() )
+        while ( !currentNode.board.isGoal() )
         {
-            Iterable<Board> neighbours = currentNode.getBoard().neighbors();
+            neighbours = currentNode.board.neighbors();
             for ( Board neighbour : neighbours )
             {
-                if ( !neighbour.equals( currentNode ) )
+                if ( !neighbour.equals( currentNode.previousNode.board ) )
                 {
-                    nodes.insert( new SearchNode( neighbour, moves, currentNode ) );
+                    nodes.insert( new SearchNode( neighbour, currentNode.moves + 1, currentNode ) );
                 }
             }
             currentNode = nodes.delMin();
-            moves++;
         }
+        return;
     }
 
     // is the initial board solvable?
     public boolean isSolvable()
     {
-        return false;
+        return true;
     }
 
     // min number of moves to solve initial board; -1 if unsolvable
     public int moves()
     {
-        return moves;
+        return currentNode.moves;
     }
 
     // sequence of boards in a shortest solution; null if unsolvable
     public Iterable<Board> solution()
     {
-        Queue<Board> solution = new Queue<Board>();
+        Stack<Board> solution = new Stack<>();
         SearchNode searchNode = currentNode;
-        solution.enqueue( searchNode.board );
-        while ( searchNode.previous != null )
+        solution.push( searchNode.board );
+        while ( searchNode.previousNode != null )
         {
-            searchNode = searchNode.previous;
-            solution.enqueue( searchNode.getBoard() );
+            searchNode = searchNode.previousNode;
+            solution.push( searchNode.board );
         }
         return solution;
     }
