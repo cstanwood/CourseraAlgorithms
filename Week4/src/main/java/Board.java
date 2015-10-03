@@ -3,9 +3,9 @@ import java.util.List;
 
 public class Board
 {
-    private int[][] blocks;
-    private int[][] goal;
-    private int moves = 0;
+    private short[][] blocks;
+    private short[][] goal;
+    private short moves = 0;
     //	private Board previousBoard;
 
     // construct a board from an N-by-N array of blocks
@@ -13,35 +13,48 @@ public class Board
     public Board( int[][] blocks )
     {
         int length = blocks.length;
-        this.blocks = new int[ length ][ length ];
-        this.goal = new int[ length ][ length ];
-        int k = 1;
+        this.blocks = new short[ length ][ length ];
+        this.goal = new short[ length ][ length ];
+        short k = 1;
         // make a deep copy
-        for ( int i = 0; i < blocks.length; i++ )
+        for ( short i = 0; i < blocks.length; i++ )
         {
-            for ( int j = 0; j < blocks[ i ].length; j++ )
+            for ( short j = 0; j < blocks[ i ].length; j++ )
             {
-                this.blocks[ i ][ j ] = blocks[ i ][ j ];
+                this.blocks[ i ][ j ] = (short) blocks[ i ][ j ];
                 goal[ i ][ j ] = k++;
             }
         }
         goal[ length - 1 ][ length - 1 ] = 0;
     }
 
+    private int[][] convertToInt( short[][] shortBlocks )
+    {
+        int[][] intBlocks = new int[ shortBlocks.length ][ shortBlocks.length ];
+        for ( int i = 0; i < shortBlocks.length; i++ )
+        {
+            for ( int j = 0; j < shortBlocks.length; j++ )
+            {
+                intBlocks[ i ][ j ] = shortBlocks[ i ][ j ];
+            }
+        }
+        return intBlocks;
+    }
+
     // board dimension N
     public int dimension()
     {
-        return blocks.length;
+        return  blocks.length;
     }
 
 
     // number of blocks out of place
     public int hamming()
     {
-        int hammingCount = moves;
-        for ( int i = 0; i < dimension(); i++ )
+        short hammingCount = moves;
+        for ( short i = 0; i < dimension(); i++ )
         {
-            for ( int j = 0; j < dimension(); j++ )
+            for ( short j = 0; j < dimension(); j++ )
             {
                 if ( blocks[ i ][ j ] != goal[ i ][ j ] && blocks[ i ][ j ] != 0 )
                 {
@@ -56,12 +69,12 @@ public class Board
     // sum of Manhattan distances between blocks and goal
     public int manhattan()
     {
-        int manhattan = moves;
+        short manhattan = moves;
         int colGoal;
         int rowGoal;
-        for ( int row = 0; row < dimension(); row++ )
+        for ( short row = 0; row < dimension(); row++ )
         {
-            for ( int col = 0; col < dimension(); col++ )
+            for ( short col = 0; col < dimension(); col++ )
             {
                 if ( blocks[ row ][ col ] != 0 )
                 {
@@ -79,9 +92,9 @@ public class Board
     // is this board the goal board?
     public boolean isGoal()
     {
-        for ( int i = 0; i < dimension(); i++ )
+        for ( short i = 0; i < dimension(); i++ )
         {
-            for ( int j = 0; j < dimension(); j++ )
+            for ( short j = 0; j < dimension(); j++ )
             {
                 if ( blocks[ i ][ j ] != goal[ i ][ j ] )
                 {
@@ -104,8 +117,8 @@ public class Board
             }
         }
 
-        int[] space = findSpace();
-        int row;
+        short[] space = findSpace();
+        short row;
         if ( space[ 0 ] == 0 )
         {
             row = 1;
@@ -151,9 +164,9 @@ public class Board
     // all neighboring boards
     public Iterable<Board> neighbors()
     {
-        int[] space = findSpace();
-        int row = space[ 0 ];
-        int col = space[ 1 ];
+        short[] space = findSpace();
+        short row = space[ 0 ];
+        short col = space[ 1 ];
 
         Board left = null;
         Board right = null;
@@ -164,7 +177,7 @@ public class Board
         {
             blocks[ row ][ col ] = blocks[ row ][ col - 1 ];
             blocks[ row ][ col - 1 ] = 0;
-            left = new Board( blocks );
+            left = new Board( convertToInt( blocks ) );
             blocks[ row ][ col - 1 ] = blocks[ row ][ col ];
             blocks[ row ][ col ] = 0;
         }
@@ -173,7 +186,7 @@ public class Board
         {
             blocks[ row ][ col ] = blocks[ row ][ col + 1 ];
             blocks[ row ][ col + 1 ] = 0;
-            right = new Board( blocks );
+            right = new Board( convertToInt( blocks ) );
             blocks[ row ][ col + 1 ] = blocks[ row ][ col ];
             blocks[ row ][ col ] = 0;
         }
@@ -182,7 +195,7 @@ public class Board
         {
             blocks[ row ][ col ] = blocks[ row - 1 ][ col ];
             blocks[ row - 1 ][ col ] = 0;
-            top = new Board( blocks );
+            top = new Board( convertToInt( blocks ) );
             blocks[ row - 1 ][ col ] = blocks[ row ][ col ];
             blocks[ row ][ col ] = 0;
         }
@@ -191,7 +204,7 @@ public class Board
         {
             blocks[ row ][ col ] = blocks[ row + 1 ][ col ];
             blocks[ row + 1 ][ col ] = 0;
-            bottom = new Board( blocks );
+            bottom = new Board( convertToInt( blocks ) );
             blocks[ row + 1 ][ col ] = blocks[ row ][ col ];
             blocks[ row ][ col ] = 0;
         }
@@ -216,15 +229,15 @@ public class Board
         return neighbors;
     }
 
-    private int[] findSpace()
+    private short[] findSpace()
     {
-        for ( int i = 0; i < dimension(); i++ )
+        for ( short i = 0; i < dimension(); i++ )
         {
-            for ( int j = 0; j < dimension(); j++ )
+            for ( short j = 0; j < dimension(); j++ )
             {
                 if ( blocks[ i ][ j ] == 0 )
                 {
-                    int[] space = new int[ 2 ];
+                    short[] space = new short[ 2 ];
                     space[ 0 ] = i;
                     space[ 1 ] = j;
                     return space;
@@ -238,13 +251,13 @@ public class Board
     public String toString()
     {
         StringBuilder output =
-                new StringBuilder( String.format( "%d\t%d\t%d\n", dimension(), hamming(), manhattan() ) );
+                new StringBuilder( String.format( "%2d\n", dimension()) );
 //                new StringBuilder( String.format( "%d\t%d\t%d\n", dimension(), hamming(), manhattan() ) );
-        for ( int i = 0; i < blocks.length; i++ )
+        for ( short i = 0; i < blocks.length; i++ )
         {
-            for ( int j = 0; j < blocks.length; j++ )
+            for ( short j = 0; j < blocks.length; j++ )
             {
-                output.append( String.format( "%2d", blocks[ i ][ j ] ) );
+                output.append( String.format( "%3d", blocks[ i ][ j ] ) );
             }
             output.append( "\n" );
         }

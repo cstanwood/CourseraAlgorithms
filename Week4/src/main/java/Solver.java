@@ -8,9 +8,9 @@ import java.util.Comparator;
 public class Solver
 {
 
-    SearchNode currentNode;
-    SearchNode currentNodeTwin;
-    boolean solvable = true;
+    private SearchNode currentNode;
+    private SearchNode currentNodeTwin;
+    private boolean solvable = true;
 
     private class SearchNode
     {
@@ -59,7 +59,6 @@ public class Solver
 
         solve( initial );
 
-        return;
     }
 
     private void solve( Board initial )
@@ -140,12 +139,23 @@ public class Solver
     // min number of moves to solve initial board; -1 if unsolvable
     public int moves()
     {
-        return currentNode.moves;
+        if ( isSolvable() )
+        {
+            return currentNode.moves;
+        }
+        else
+        {
+            return -1;
+        }
     }
 
     // sequence of boards in a shortest solution; null if unsolvable
     public Iterable<Board> solution()
     {
+        if ( !solvable )
+        {
+            return null;
+        }
         Stack<Board> solution = new Stack<>();
         SearchNode searchNode = currentNode;
         solution.push( searchNode.board );
@@ -176,7 +186,7 @@ public class Solver
         // solve the puzzle
         Solver solver = new Solver( initial );
 
-        // print solution to standard output
+        // prshort solution to standard output
         if ( !solver.isSolvable() )
         {
             StdOut.println( "No solution possible" );
